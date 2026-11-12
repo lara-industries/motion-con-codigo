@@ -1,0 +1,18 @@
+{
+  "name": "mi-titulo",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@fontsource/anton": "5.2.5",
+    "@remotion/cli": "4.0.537",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.537"
+  },
+  "scripts": {
+    "revision": "remotion render src/index.ts TituloOnPaper out/review.mp4 --concurrency=2",
+    "alfa": "remotion render src/index.ts Titulo out/alpha.mov --codec=prores --prores-profile=4444 --pixel-format=yuva444p10le --image-format=png --concurrency=2",
+    "png": "remotion render src/index.ts Titulo out/png --sequence --image-format=png --concurrency=2",
+    "revisar": "sh revisar.sh"
+  }
+}
